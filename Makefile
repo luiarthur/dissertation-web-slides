@@ -8,7 +8,7 @@ clean:
 serve:
 	bundle exec jekyll serve --incremental --livereload
 
-clean_serve: clean serve
+clean-serve: clean serve
 
 update-gems:
 	rm Gemfile.lock

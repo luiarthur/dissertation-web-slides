@@ -112,14 +112,14 @@ or quantify model uncertainty
 
 <section markdown="1">
 # Bayesian Feature Allocation Model for Heterogeneous Cell Populations
-
 ### Notation
 - $I$: Number of samples
 - $J$: Number of markers
 - $N_i$: Number of observations in sample $i$
-- $\tilde y_{i,n,j}$: Raw expression levels for observation $n$ in samples $i$
-  for marker $j$. ($\tilde y_{i,n,j} \ge 0$)
-- $c_{i,j}$: Cutoff for marker $j$, sample $i$
-- $y_{i,n,j}$: Transormed expression levels for observation $n$, sample $i$,
-  marker $j$
+- $\tilde y_{i,n,j}$: Raw expression levels for observation&nbsp;$n,$ in samples&nbsp;$i,$
+  for marker $j.$ (For $\tilde y_{i,n,j} \ge 0$)
+- $c_{i,j}$: Cutoff for marker&nbsp;$j,$ sample&nbsp;$i$
+- $y_{i,n,j}$: Transformed expression levels for observation&nbsp;$n,$ sample&nbsp;$i,$
+  marker&nbsp;$j$
+> $$y_{i,n,j}=\log(\tilde{y}_{i,n,j}/c_{i,j}) \in \mathbb{R}.$$
 </section>

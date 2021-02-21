@@ -1,6 +1,7 @@
 :root {
   --main-width: 65vw; /* 65vw is best for 16:9 screens. for 4:3 screens, try 100vw. */
   --main-margin-top: 2vw;
+  --main-font-size: 2vw;
 }
 div.footer {
   width: var(--main-width);
@@ -38,7 +39,7 @@ section.title-slide h2 {
   margin:0;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
-  font-size: 2.0vw;
+  font-size: var(--main-font-size);
   color: black;
 }
 section {
@@ -58,6 +59,9 @@ section {
 figcaption {
   font-size: 1.5vw;
 }
+li {
+  line-height: 3vw;
+}
 ul.far li { /* far line separation */
   margin-bottom: 3vw;
 }
@@ -71,4 +75,8 @@ section a {
   padding: 1vw;
   border-radius: 0.5vw;
   margin: 2vw;
+}
+.katex {
+  font-size: calc(var(--main-font-size) * .97);
+  color: #404040;
 }
