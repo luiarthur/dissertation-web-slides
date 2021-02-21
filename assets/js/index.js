@@ -3,6 +3,7 @@ import { handleDirection, Slider } from './pager.js'
 import './citefrombib.min.js'
 import "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
 import "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+import './disqus.js'
 
 // Initialize the slider. If an id is provided, then use that as starting page.
 const initPageIdGetter = window.location.href.split('#')

@@ -46,6 +46,13 @@ export class Slider {
     }
 
     this.verbose && console.log("setting visibility")
+
+    // Don't include disqus for the references page.
+    if (this.currentPage == this.totalPages) {
+      $("#disqus_thread").css("display", "none")
+    } else {
+      $("#disqus_thread").css("display", "block")
+    }
   }
 }
 
