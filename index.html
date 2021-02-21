@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dissertation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <!------ styles ------->
+  <!-- custom -->
+  <link rel="stylesheet" href="assets/css/basic.css">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+</head>
+<body>
+  <div class="slide-deck hint">  <!-- when developing, add class="hint" to see box around .slide-deck-->
+    <!-- TITLE SLIDE -->
+    <section>
+      <h1 class="title-slide">Bayesian Modeling for Heterogeneous Multivariate Data</h1>
+      <br>
+      Arthur Lui
+      <br>
+      Advisor: Juhee Lee
+      <br>
+      5 March, 2021
+
+      <br><br>
+      <small>
+      Department of Statistics
+      <br>
+      UC Santa Cruz
+      </small>
+    </section> 
+
+    <!-- Project 1 -->
+    <section>
+      <br>
+      <br>
+      <h2 class="title-slide">
+        A Bayesian Feature Allocation Model for Identifying Cell Subpopulations
+        Using Cytometry Data
+      </h2>
+      <br>
+      <hr>
+    </section>
+
+    <section>
+      <h1>Cytometry at time-of-flight (CyTOF) </h1>
+      <ul class="far">
+        <li> Commercialized in 2009 </li>
+        <li> Makes use of time-of-flight spectrometry to accelerate, separate,
+          and identify ions by mass</li>
+        <li> Enables detection of many parameters (biological, phenotypic, or
+          functional markers) in less time and at a higher resolution <param
+          citep="cheung2011screening"></li>
+        <li>Led to greater understanding of natural killer (NK) cells</li>
+      </ul>
+    </section>
+    <section>
+      <h1>Natural Killer Cells </h1>
+      <ul class="far">
+        <li> Natural Killer cells play a critical role in cancer
+          immunosurveillance. </li>
+        <li> NK cell diversity affects antiviral response. </li>
+        <li> Drs. Thall and Rezvani, at MD Anderson Cancer Center, have
+          conducted clinical trials to study the potential clinical efficacy of
+          umbilical cord blood (UCB) transplantation as a therapy for leukemia.
+        </li>
+        <li> UCB NK cell therapy has the advantage of low risk of viral
+          transmission from donor to recipient <param citep="sarvaria2017umbilical">. </li>
+        <li> In the trials, leukemia patients received UCB cell transplants,
+          and NK cell surface markers are measured using mass cytometry. </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1> CyTOF Data </h1>
+      <a href="https://docs.google.com/spreadsheets/d/1_eJHC6sx0NcCIs79hbd6cgyk9Xm03Y_binlRg__ET5E/edit#gid=0">
+      <figure class="center" style="width:75%">
+        <img src="assets/img/fam/fam-table1.svg" style="width:100%">
+        <figcaption>Table 1: Cord-blood sample marker expression levels for 6 of 32
+          NK-cell markers (columns), and 6 of 41474 cells (rows). Last row
+          contains cutoff values returned by CyTOF instrument.</figcaption>
+      </figure>
+      </a>
+      <ul class="med">
+        <li>Data missing not at random</li>
+        <ul>
+          <li>Some markers contain up to 85% missing values</li>
+        </ul>
+        <li>
+          Cutoff values are computed after measurement
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1> CyTOF Data </h1>
+      <a href="https://docs.google.com/spreadsheets/d/1_eJHC6sx0NcCIs79hbd6cgyk9Xm03Y_binlRg__ET5E/edit#gid=76258114">
+      <figure class="center" style="width:75%">
+        <img src="assets/img/fam/fam-table2.svg" style="width:100%">
+        <figcaption>Table 2: Cell subpopulations (rows). </figcaption>
+      </figure>
+      </a>
+      <p>
+         Obtaining cell subpopulations using overly-simplistic may yield an
+         unreasonably high number of subpopulations.
+      </p>
+    </section>
+
+    <section>
+      <h1> Objective </h1>
+      <figure class="center" style="width:75%">
+        <img src="assets/img/fam/fam-overview-cleaner.png" style="width:100%">
+        <figcaption>
+          Figure 1:Given marker expression samples, identify potential latent
+          NK cell subpopulations and their abundances in each sample. Note
+          the pervasiveness of missing data (black cells).
+        </figcaption>
+      </figure>
+    </section>
+
+
+
+    <!-- REFERENCES -->
+    <section>
+      <h1>References</h1>
+      <div bibliography="assets/data/bib.json"></div>
+    </section>
+
+    <!-- BACKUP SLIDES-->
+    <div class="backup-slides">
+      <section>
+        Here is something more.
+      </section>
+    </div>
+  </div>
+
+  <!-- Load all js scripts -->
+  <script type="module" src="assets/js/index.js"></script>
+</body>
+</html>
+
+<!-- TODO: 
+  - code syntax highlight
+  - Handle printing. 
+  - set a url parameter?
+-->
