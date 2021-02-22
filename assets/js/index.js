@@ -12,8 +12,19 @@ const slider = new Slider(firstPage)
 
 // This handles slide navigation.
 $(document).on("keydown", function (e) {
+  console.log("handling keydown")
   handleDirection(e, slider)
 });
+$("#current-page").on("swipeleft", function (e) {
+  console.log("handling left swipe")
+  handleSwipeLeft(e, slider)
+});
+
+$("#current-page").on("swiperight", function (e) {
+  console.log("handling right swipe")
+  handleSwipeRight(e, slider)
+});
+
 
 // citefrombib
 citefrombib.make()

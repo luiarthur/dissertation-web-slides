@@ -85,7 +85,7 @@
   <figure class="center" style="width:75%">
     <img src="assets/img/fam/fam-overview-cleaner.png" style="width:100%">
     <figcaption>
-      Figure 1:Given marker expression samples, identify potential latent
+      Figure 1: Given marker expression samples, identify potential latent
       NK cell subpopulations and their abundances in each sample. Note
       the pervasiveness of missing data (black cells).
     </figcaption>
@@ -111,15 +111,14 @@ or quantify model uncertainty
 </section>
 
 <section markdown="1">
-# Bayesian Feature Allocation Model for Heterogeneous Cell Populations
-### Notation
-- *I*: Number of samples
-- *J*: Number of markers
-- *N<sub>i</sub>*: Number of observations in sample *i*. 
-- *ỹ*<sub>*i,n,j*</sub>: Raw expression levels for observation&nbsp;*n*, in samples&nbsp;*i*,
-  for marker *j*. (For *ỹ*<sub>*i,n,j*</sub> ≥ 0)
-- *c*<sub>*i,j*</sub>: Cutoff for marker&nbsp;*j*, sample&nbsp;*i*
-- *y*<sub>*i,n,j*</sub>: Transformed expression levels for observation&nbsp;*n*, sample&nbsp;*i*,
-  marker&nbsp;*j*
+# Bayesian Feature Allocation Model for Heterogeneous Cell Populations -- Notation
+- $I$: Number of samples
+- $J$: Number of markers
+- $N_i$: Number of observations in sample $i$. 
+- $y_{i,n,j}$: Raw expression levels for observation&nbsp;$n$, in samples&nbsp;$i$,
+  for marker $j$. (For $ỹ_{i,n,j} \ge 0$)
+- $c_{i,j}$: Cutoff for marker&nbsp;$j$, sample&nbsp;$i$
+- $y_{i,n,j}$: Transformed expression levels for observation&nbsp;$n$, sample&nbsp;$i$,
+  marker&nbsp;$j$
 > $$y_{i,n,j}=\log(\tilde{y}_{i,n,j}/c_{i,j}) \in \mathbb{R}.$$
 </section>

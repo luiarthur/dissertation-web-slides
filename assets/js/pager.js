@@ -56,6 +56,11 @@ export class Slider {
   }
 }
 
+export function setUrlParam(slider) {
+  // Set query string
+  window.location.href = window.location.href.split('#')[0] + "#" + slider.currentPage
+}
+
 export function handleDirection(e, slider) {
   const leftKeys = [8 ,37, 72]  // backspace, left, h
   const rightKeys = [13, 32, 39, 76]  // enter, space, right, l
@@ -66,8 +71,7 @@ export function handleDirection(e, slider) {
     slider.increment()
   }
 
-  // Set query string
-  window.location.href = window.location.href.split('#')[0] + "#" + slider.currentPage
+  setUrlParam(slider)
 }
 
 // Page counter.
