@@ -49,7 +49,7 @@
   <h1> CyTOF Data </h1>
   <a href="https://docs.google.com/spreadsheets/d/1_eJHC6sx0NcCIs79hbd6cgyk9Xm03Y_binlRg__ET5E/edit#gid=0">
   <figure class="center" style="width:75%">
-    <img src="assets/img/fam/fam-table1.svg" style="width:100%">
+    <img src="assets/img/fam/intro/fam-table1.svg" style="width:100%">
     <figcaption>Table 1: Cord-blood sample marker expression levels for 6 of 32
       NK-cell markers (columns), and 6 of 41474 cells (rows). Last row
       contains cutoff values returned by CyTOF instrument.</figcaption>
@@ -70,7 +70,7 @@
   <h1> CyTOF Data </h1>
   <a href="https://docs.google.com/spreadsheets/d/1_eJHC6sx0NcCIs79hbd6cgyk9Xm03Y_binlRg__ET5E/edit#gid=76258114">
   <figure class="center" style="width:75%">
-    <img src="assets/img/fam/fam-table2.svg" style="width:100%">
+    <img src="assets/img/fam/intro/fam-table2.svg" style="width:100%">
     <figcaption>Table 2: Cell subpopulations (rows). </figcaption>
   </figure>
   </a>
@@ -83,7 +83,7 @@
 <section>
   <h1> Objective </h1>
   <figure class="center" style="width:75%">
-    <img src="assets/img/fam/fam-overview-cleaner.png" style="width:100%">
+    <img src="assets/img/fam/intro/fam-overview-cleaner.png" style="width:100%">
     <figcaption>
       Figure 1: Given marker expression samples, identify potential latent
       NK cell subpopulations and their abundances in each sample. Note
@@ -138,38 +138,31 @@ or quantify model uncertainty
   $n$, sample $i$
 </section>
 
-<!-- TODO: implement a pause?
-\begin{frame}{Sampling Distribution}
-  \begin{align*}
-    y_{inj} \mid \bm\eta_{ij}, \bm\mu^\star, \sigma^2_i,
+<!-- TODO: implement a pause? -->
+<section markdown="1">
+# Sampling Distribution
+
+$$
+\begin{aligned}
+    y_{i,n,j} \mid \bm\eta_{i,j}, \bm\mu^\star, \sigma^2_i,
     \bm Z, \lambda_{i,n}=k \ind
     \begin{cases}
-      F_{0ij}, &\mbox{if $z_{j,k}=0$},\\
-      F_{1ij}, &\mbox{if $z_{j,k}=1$}.\\
-    \end{cases} \label{eq:y-mix}
-  \end{align*}
-  \pause
-  %
-  \begin{itemize}
-    \item $F_{0ij} = \sum_{\ell=1}^{L^0} \eta^0_{ij\ell}\cdot
-      \text{Normal}\p{\mu^\star_{0\ell}, \sigma^2_i}$,
-      where $\mu^\star_{0\ell} < 0$
-    \item $F_{1ij} = \sum_{\ell=1}^{L^1} \eta^1_{ij\ell}\cdot
-      \text{Normal}\p{\mu^\star_{1\ell}, \sigma^2_i}$,
-      where $\mu^\star_{1\ell} > 0$
-  %\item
-  %  Fixed number of mixture components \(L^0\) and \(L^1\)
-  %\item
-  %  Mixture weights \(\bet^0_{ij}\) and \(\bet^1_{ij}\) where
-  %  \(\sum_{\ell=1}^{L^0} \eta^0_{ij\ell}=\sum_{\ell=1}^{L^1}\eta^1_{ij\ell}=1\),
-  %  and \(\eta^0_{ij\ell}, \eta^1_{ij\ell} > 0\)
-  \end{itemize}
-  %
-  \begin{figure}
-    \begin{center}
-      \includegraphics[scale=.2]{img/fam/custom/mixture.pdf}
-      \caption{Kernel density estimate of samples from $F_0$ (blue) and $F_1$ (red)}
-    \end{center}
-  \end{figure}
-\end{frame}
--->
+      F_{0,i,j}, &\text{if }z_{j,k}=0,\\
+      F_{1,i,j}, &\text{if }z_{j,k}=1.\\
+    \end{cases}
+\end{aligned}
+$$
+
+<!-- pause here -->
+
+- $F_{0,i,j} = \sum_{\ell=1}^{L^0} \eta^0_{i,j,\ell} \cdot \text{Normal}\p{\mu^\star\_{0,\ell}, \sigma^2\_i}$
+- $F_{1,i,j} = \sum_{\ell=1}^{L^1} \eta^1_{i,j,\ell} \cdot \text{Normal}\p{\mu^\star\_{1,\ell}, \sigma^2\_i}$
+
+<figure class="center" style="width:30%">
+  <img src="assets/img/fam/custom/mixture.svg" style="width:100%">
+</figure>
+<span style="font-size: 1vw;">
+  Figure 2: Kernel density estimate of samples from $F_0$ (blue) and $F_1$
+  (red).
+</span>
+</section>

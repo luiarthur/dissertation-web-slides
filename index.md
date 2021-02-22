@@ -1,7 +1,7 @@
 ---
 # In dev mode, border around slides are not shown.
 # Also, disqus will be hidden for faster reloading.
-dev: false
+dev: true
 ---
 
 <!-- TITLE SLIDE -->
