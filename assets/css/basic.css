@@ -36,7 +36,7 @@ div.right-panel {
   width: var(--side-panel-width);
 }
 .control-panel .arrow {
-  padding: 2vw;
+  padding: 5vw;
   font-size: 2vw;
   color: silver;
 }

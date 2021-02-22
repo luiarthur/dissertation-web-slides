@@ -121,4 +121,55 @@ or quantify model uncertainty
 - $y_{i,n,j}$: Transformed expression levels for observation&nbsp;$n$, sample&nbsp;$i$,
   marker&nbsp;$j$
 > $$y_{i,n,j}=\log(\tilde{y}_{i,n,j}/c_{i,j}) \in \mathbb{R}.$$
+    - $(y_{i,n,j} \gg 0)$ likely corresponds to expression
+    - $(y_{i,n,j} \ll 0)$ likely corresponds to non-expression
 </section>
+
+<section markdown="1">
+# Bayesian Feature Allocation Model for Heterogeneous Cell Populations
+
+- $\bm Z$: $(J \times K)$ binary matrix defining the latent subpopulations.
+    - if $Z_{j,k} = 1$, then marker $j$ is expressed in subpopulation $k$
+    - if $Z_{j,k} = 0$, then marker $j$ is not expressed in subpopulation $k$
+
+- $K$ is a sufficiently large constant
+
+- $\lambda_{i,n} \in \\{1,...,K\\}$: The latent subpopulation of observation
+  $n$, sample $i$
+</section>
+
+<!-- TODO: implement a pause?
+\begin{frame}{Sampling Distribution}
+  \begin{align*}
+    y_{inj} \mid \bm\eta_{ij}, \bm\mu^\star, \sigma^2_i,
+    \bm Z, \lambda_{i,n}=k \ind
+    \begin{cases}
+      F_{0ij}, &\mbox{if $z_{j,k}=0$},\\
+      F_{1ij}, &\mbox{if $z_{j,k}=1$}.\\
+    \end{cases} \label{eq:y-mix}
+  \end{align*}
+  \pause
+  %
+  \begin{itemize}
+    \item $F_{0ij} = \sum_{\ell=1}^{L^0} \eta^0_{ij\ell}\cdot
+      \text{Normal}\p{\mu^\star_{0\ell}, \sigma^2_i}$,
+      where $\mu^\star_{0\ell} < 0$
+    \item $F_{1ij} = \sum_{\ell=1}^{L^1} \eta^1_{ij\ell}\cdot
+      \text{Normal}\p{\mu^\star_{1\ell}, \sigma^2_i}$,
+      where $\mu^\star_{1\ell} > 0$
+  %\item
+  %  Fixed number of mixture components \(L^0\) and \(L^1\)
+  %\item
+  %  Mixture weights \(\bet^0_{ij}\) and \(\bet^1_{ij}\) where
+  %  \(\sum_{\ell=1}^{L^0} \eta^0_{ij\ell}=\sum_{\ell=1}^{L^1}\eta^1_{ij\ell}=1\),
+  %  and \(\eta^0_{ij\ell}, \eta^1_{ij\ell} > 0\)
+  \end{itemize}
+  %
+  \begin{figure}
+    \begin{center}
+      \includegraphics[scale=.2]{img/fam/custom/mixture.pdf}
+      \caption{Kernel density estimate of samples from $F_0$ (blue) and $F_1$ (red)}
+    \end{center}
+  \end{figure}
+\end{frame}
+-->
