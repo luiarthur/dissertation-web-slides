@@ -1,12 +1,12 @@
-<section class="title-slide">
-  <br>
-  <br>
-  <h2>
-    A Bayesian Feature Allocation Model for Identifying Cell Subpopulations
-    Using Cytometry Data
-  </h2>
-  <br>
-  <hr>
+<section class="title-slide" markdown="1">
+
+>
+>
+
+## A Bayesian Feature Allocation Model for Identifying Cell Subpopulations Using Cytometry Data
+
+---
+
 </section>
 
 <section markdown="1">
