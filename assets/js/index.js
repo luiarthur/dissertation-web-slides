@@ -1,5 +1,5 @@
 import 'https://code.jquery.com/jquery-3.5.1.min.js'
-import { handleDirection, Slider } from './pager.js'
+import { setUrlParam, handleDirection, Slider } from './pager.js'
 import './citefrombib.min.js'
 import "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
 import "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
@@ -15,16 +15,18 @@ $(document).on("keydown", function (e) {
   console.log("handling keydown")
   handleDirection(e, slider)
 });
-$("#current-page").on("swipeleft", function (e) {
-  console.log("handling left swipe")
-  handleSwipeLeft(e, slider)
-});
 
-$("#current-page").on("swiperight", function (e) {
-  console.log("handling right swipe")
-  handleSwipeRight(e, slider)
-});
+$(".left-panel a.arrow").click(() => {
+  console.log("left arrow clicked!")
+  slider.decrement()
+  setUrlParam(slider)
+})
 
+$(".right-panel a.arrow").click(() => {
+  console.log("right arrow clicked!")
+  slider.increment()
+  setUrlParam(slider)
+})
 
 // citefrombib
 citefrombib.make()
@@ -41,3 +43,5 @@ $(document).ready(function () { // this need jquery
     ]
   });
 });
+
+// export handleDirection

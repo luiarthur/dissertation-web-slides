@@ -77,8 +77,7 @@ export function handleDirection(e, slider) {
 // Page counter.
 export function makePager() {
   const pager = `
-  <div id="page-counter">
     <span id="current-page"></span> / <span id="total-pages"></span>
-  </div>`
-  $('.slide-deck').before(pager)
+    `
+  $('#page-counter').html(pager)
 }

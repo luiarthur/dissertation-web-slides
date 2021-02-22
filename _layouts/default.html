@@ -2,12 +2,27 @@
 <html lang="en">
 {% include head.html %}
 <body>
-  <small>
-    luiarthur.github.io/dissertation-web-slides
-  </small>
-  <div class="slide-deck {% if page.dev %} hint {% endif %}">
-    {{ content }}
+  <div id="slides-navbar">
+    <span id="slides-link">
+      luiarthur.github.io/dissertation-web-slides
+    </span>
+    <span id="page-counter"></span>
   </div>
+
+  <div class="slide-container">
+    <div class="control-panel left-panel">
+      <a class='arrow'>&laquo;</a>
+    </div>
+
+    <div class="slide-deck {% if page.dev %} hint {% endif %}">
+      {{ content }}
+    </div>
+
+    <div class="control-panel right-panel">
+      <a class='arrow'>&raquo;</a>
+    </div>
+  </div>
+
   <br><br><br><br>
   <div class="footer">
     {% include footer.html %}

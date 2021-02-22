@@ -1,6 +1,7 @@
 :root {
   --main-width: 65vw; /* 65vw is best for 16:9 screens. for 4:3 screens, try 100vw. */
-  --main-margin-top: 2vw;
+  --side-panel-width: calc((98vw - var(--main-width)) / 2);
+  --main-margin-top: 0.5vw;
   --main-font-size: 2vw;
   --title-slide-font: 'News Cycle', sans-serif;
   /* using serif font. */
@@ -12,23 +13,47 @@
   */
   --author-info-font: 'Roboto', sans-serif;
   --main-font-color: #404040;
+  --nav-font-size: 1vw;
 }
 body * {
   color: var(--main-font-color);
+}
+.slide-container {
+  margin-top: var(--main-margin-top);
 }
 div.footer {
   width: var(--main-width);
   margin: auto;
 }
-.slide-deck.hint {
-  border: solid 1px lightgrey;
+div.left-panel {
+  text-align: right;
+  float: left;
+  width: var(--side-panel-width);
+}
+div.right-panel {
+  text-align: left;
+  float: left;
+  width: var(--side-panel-width);
+}
+.control-panel .arrow {
+  padding: 2vw;
+  font-size: 2vw;
+  color: silver;
+}
+a.arrow:hover {
+  color: blue;
+  cursor: pointer;
+  font-size: 2.2vw;
 }
 .slide-deck {
-   width: var(--main-width);
-   height: calc(var(--main-width) * 0.75);
-   margin: auto;
-   margin-top: var(--main-margin-top);
-   margin-bottom: 0vw;
+  float: left;
+  width: var(--main-width);
+  height: calc(var(--main-width) * 0.75);
+  /*margin: auto;*/
+  margin-bottom: 0vw;
+}
+.slide-deck.hint {
+  border: solid 1px lightgrey;
 }
 section h1, section h2, section h3, section h4, section h5, section h6 {
   margin-top: 0;
@@ -65,8 +90,11 @@ section.title-slide h2 {
 section {
   display: none;
 }
+#slides-link {
+  font-size: var(--nav-font-size);
+}
 #page-counter {
-  font-size: 1.5vw;
+  font-size: var(--nav-font-size);
   position: absolute;
   right: 1vw;
 }
