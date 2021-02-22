@@ -16,14 +16,14 @@ $(document).on("keydown", function (e) {
   handleDirection(e, slider)
 });
 
-$(".left-panel a.arrow").click(() => {
-  console.log("left arrow clicked!")
+$(".left-panel").click(() => {
+  console.log("clicked toward left!")
   slider.decrement()
   setUrlParam(slider)
 })
 
-$(".right-panel a.arrow").click(() => {
-  console.log("right arrow clicked!")
+$(".right-panel").click(() => {
+  console.log("clicked toward right!")
   slider.increment()
   setUrlParam(slider)
 })

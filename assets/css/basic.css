@@ -1,6 +1,7 @@
 :root {
   --main-width: 65vw; /* 65vw is best for 16:9 screens. for 4:3 screens, try 100vw. */
-  --side-panel-width: calc((98vw - var(--main-width)) / 2);
+  --main-height: calc(var(--main-width) * 0.75);
+  --side-panel-width: calc((97vw - var(--main-width)) / 2);
   --main-margin-top: 0.5vw;
   --main-font-size: 2vw;
   --title-slide-font: 'News Cycle', sans-serif;
@@ -20,35 +21,21 @@ body * {
 }
 .slide-container {
   margin-top: var(--main-margin-top);
+  margin-bottom: 100vh;
 }
 div.footer {
   width: var(--main-width);
   margin: auto;
 }
-div.left-panel {
-  text-align: right;
+.control-panel{
   float: left;
   width: var(--side-panel-width);
-}
-div.right-panel {
-  text-align: left;
-  float: left;
-  width: var(--side-panel-width);
-}
-.control-panel .arrow {
-  padding: 5vw;
-  font-size: 2vw;
-  color: silver;
-}
-a.arrow:hover {
-  color: blue;
-  cursor: pointer;
-  font-size: 2.2vw;
+  height: var(--main-height);
 }
 .slide-deck {
   float: left;
   width: var(--main-width);
-  height: calc(var(--main-width) * 0.75);
+  height: var(--main-height);
   /*margin: auto;*/
   margin-bottom: 0vw;
 }
