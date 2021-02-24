@@ -155,14 +155,17 @@ $$
 
 <!-- pause here -->
 
-- $F_{0,i,j} = \sum_{\ell=1}^{L^0} \eta^0_{i,j,\ell} \cdot \text{Normal}\p{\mu^\star\_{0,\ell}, \sigma^2\_i}$
-- $F_{1,i,j} = \sum_{\ell=1}^{L^1} \eta^1_{i,j,\ell} \cdot \text{Normal}\p{\mu^\star\_{1,\ell}, \sigma^2\_i}$
+- $F_{0,i,j} = \sum_{\ell=1}^{L^0} \eta^0_{i,j,\ell} \cdot \text{Normal}(\mu^\star\_{0,\ell}, \sigma^2\_i)$
+- $F_{1,i,j} = \sum_{\ell=1}^{L^1} \eta^1_{i,j,\ell} \cdot \text{Normal}(\mu^\star\_{1,\ell}, \sigma^2\_i)$
 
-<figure class="center" style="width:30%">
-  <img src="assets/img/fam/custom/mixture.svg" style="width:100%">
-</figure>
-<span style="font-size: 1vw;">
-  Figure 2: Kernel density estimate of samples from $F_0$ (blue) and $F_1$
-  (red).
-</span>
+<div markdown="0">
+  <figure class="center tight-img" style="width:30%">
+    <!--img src="assets/img/fam/custom/mixture.svg" style="width:100%"-->
+    <img src="assets/img/misc/Mondrian2.png" style="width:100%">
+  </figure>
+  <div class="small-float-captions" style="width:80%; margin:auto">
+    Figure 2: Kernel density estimate of samples from $F_0$ (blue) and $F_1$
+    (red).
+  </div>
+</div>
 </section>

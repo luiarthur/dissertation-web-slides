@@ -13,8 +13,12 @@
   --main-text-font-weight: 400;
   */
   --author-info-font: 'Roboto', sans-serif;
-  --main-font-color: #404040;
+  /*--main-font-color: #404040;*/
+  --main-font-color: black;
   --nav-font-size: 1vw;
+  --float-captions-size: calc(var(--main-font-size));
+  --small-float-captions-size: calc(var(--main-font-size) * 0.7);
+  --tiny-float-captions-size: calc(var(--main-font-size) * 0.5);
 }
 body * {
   color: var(--main-font-color);
@@ -113,4 +117,14 @@ section a {
 }
 .katex {
   font-size: calc(var(--main-font-size));
+}
+.small-float-captions, .small-float-captions .katex {
+  font-size: var(--small-float-captions-size);
+}
+.float-captions, .float-captions .katex {
+  font-size: var(--float-captions-size);
+}
+.tight-img {
+  margin-top: 0;
+  margin-bottom: 0;
 }
