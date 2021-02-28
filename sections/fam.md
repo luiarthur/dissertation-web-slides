@@ -48,7 +48,7 @@
 <section>
   <h1> CyTOF Data </h1>
   <a href="https://docs.google.com/spreadsheets/d/1_eJHC6sx0NcCIs79hbd6cgyk9Xm03Y_binlRg__ET5E/edit#gid=0">
-  <figure class="center" style="width:75%">
+  <figure class="center" style="width:70%">
     <img src="assets/img/fam/intro/fam-table1.svg" style="width:100%">
     <figcaption>Table 1: Cord-blood sample marker expression levels for 6 of 32
       NK-cell markers (columns), and 6 of 41474 cells (rows). Last row
@@ -69,7 +69,7 @@
 <section>
   <h1> CyTOF Data </h1>
   <a href="https://docs.google.com/spreadsheets/d/1_eJHC6sx0NcCIs79hbd6cgyk9Xm03Y_binlRg__ET5E/edit#gid=76258114">
-  <figure class="center" style="width:75%">
+  <figure class="center" style="width:70%">
     <img src="assets/img/fam/intro/fam-table2.svg" style="width:100%">
     <figcaption>Table 2: Cell subpopulations (rows). </figcaption>
   </figure>
@@ -167,5 +167,6 @@ $$
     Figure 2: Kernel density estimate of samples from $F_0$ (blue) and $F_1$
     (red).
   </div>
+  $$\int_0^\infty \theta e^{-\theta x} dx = 1$$
 </div>
 </section>

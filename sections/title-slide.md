@@ -5,7 +5,6 @@
 
 <br>
 <div class="author-info"><hr>
-<br>
 
 <div markdown="1">
 Arthur Lui  

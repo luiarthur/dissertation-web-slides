@@ -1,18 +1,15 @@
 :root {
-  --main-width: 65vw; /* 65vw is best for 16:9 screens. for 4:3 screens, try 100vw. */
+  --main-width: 90vw; /* 65vw is best for 16:9 screens. for 4:3 screens, try 100vw. */
   --main-height: calc(var(--main-width) * 0.75);
   --side-panel-width: calc((97vw - var(--main-width)) / 2);
   --main-margin-top: 0.5vw;
   --main-font-size: 2vw;
-  --title-slide-font: 'News Cycle', sans-serif;
-  /* using serif font. */
-  --main-text-font: 'Newsreader', serif;
-  --main-text-font-weight: 500;
-  /* Using sans font.
-  --main-text-font: 'Roboto', serif;
-  --main-text-font-weight: 400;
-  */
-  --author-info-font: 'Roboto', sans-serif;
+  --title-slide-font: 'Julius Sans One', sans-serif;
+  /* using sans serif font. */
+  --main-text-font: 'Fira Sans', sans-serif;
+  --main-text-font-weight: 300;
+  --main-text-bold-font-weight: 400;
+  --author-info-font: 'Fira Sans', sans-serif;
   /*--main-font-color: #404040;*/
   --main-font-color: black;
   --nav-font-size: 1vw;
@@ -49,6 +46,7 @@ div.footer {
 section h1, section h2, section h3, section h4, section h5, section h6 {
   margin-top: 0;
   font-weight: 500;
+  font-size: 2.3vw;
   font-family: var(--title-slide-font);
   /* font-family: var(--main-text-font); */
 }
@@ -63,7 +61,7 @@ section.title-slide .author-info * {
 section.title-slide h1 {
   line-height: 1.1;
   font-size: 7vw;
-  font-weight: 400;
+  font-weight: var(--main-text-bold-font-weight);
   margin-top:0;
   margin-bottom:0;
 }
@@ -114,15 +112,6 @@ section a {
   padding: 1vw;
   border-radius: 0.5vw;
   margin: 2vw;
-}
-.katex {
-  font-size: calc(var(--main-font-size));
-}
-.small-float-captions, .small-float-captions .katex {
-  font-size: var(--small-float-captions-size);
-}
-.float-captions, .float-captions .katex {
-  font-size: var(--float-captions-size);
 }
 .tight-img {
   margin-top: 0;

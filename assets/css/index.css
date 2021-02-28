@@ -1,7 +1,9 @@
 /* fonts */
+/* If using sans, it could be simpler.
 @import "https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap";
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Julius+Sans+One&display=swap');
 /* code syntax highlight */
 @import "syntax.css";
 
@@ -10,3 +12,4 @@
 
 /* custom */
 @import "basic.css";
+@import "katex-custom.css"; /* custom katex css highlight for FiraSans font. */
