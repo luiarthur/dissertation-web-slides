@@ -79,6 +79,9 @@ section.title-slide h2 {
 section {
   display: none;
 }
+#slides-navbar * {
+  color: grey;
+}
 #slides-link {
   font-size: var(--nav-font-size);
 }
